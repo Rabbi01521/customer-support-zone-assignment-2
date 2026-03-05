@@ -1,14 +1,12 @@
 import { faCalendarAlt, faCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { toast } from "react-toastify";
-const TicketList = ({ customerTikets, tickets, setTickets,setCustomerTicketsData, customerTicketsData }) => {
-  console.log(customerTicketsData);
+const TicketList = ({ tickets, setTickets, customerTicketsData }) => {
 
   const handleTickets = (ticketData) =>{
     // console.log(ticketData)
     const newTaskStatus = [...tickets, ticketData]
     setTickets(newTaskStatus)
-    setCustomerTicketsData(customerTikets);
     toast("Customer Ticket Added Succsessfully")
   }
 
@@ -16,7 +14,7 @@ const TicketList = ({ customerTikets, tickets, setTickets,setCustomerTicketsData
     <div className="col-span-2 px-3 lg:px-0">
       <h1 className="mb-4 text-2xl font-bold">Customer Tickets</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-        {customerTikets.map((ticket) => (
+        {customerTicketsData.map((ticket) => (
           <div onClick={()=> handleTickets(ticket)} key={ticket.id} className="link no-underline card bg-base-100 card-sm shadow-sm">
             <div className="card-body">
               <div className="flex justify-between items-center">

@@ -32,21 +32,21 @@ const Footer = () => {
               </ul>
             </div>
             <div className="lg:px-10 mt-5 lg:mt-0">
-              <h2 className="mb-3 text-xl font-bold lg:text-xl">Company</h2>
+              <h2 className="mb-3 text-xl font-bold lg:text-xl">Services</h2>
               <ul>
                 <li>
                   <a className="text-xs " href="#">
-                    About Us
+                    Products & Services
                   </a>
                 </li>
                 <li>
                   <a className="text-xs " href="#">
-                    Our Mission
+                    Customer Stories
                   </a>
                 </li>
                 <li>
                   <a className="text-xs " href="#">
-                    Contact Saled
+                    Download Apps
                   </a>
                 </li>
               </ul>

@@ -6,11 +6,12 @@ import TicketList from "../TicketList/TicketList";
 
 const CustomerTicketsSection = ({ customerTicketPromis, tickets, setTickets,handleRemoveTickets,resolved, setResolved, setCustomerTicketsData, customerTicketsData }) => {
   const customerTikets = use(customerTicketPromis);
-  // console.log(tickets);
+  console.log(customerTikets);
+  setCustomerTicketsData(customerTikets)
   return (
     <div className="max-w-[1200px] mx-auto pb-14 grid lg:grid-cols-3 gap-6">
       <TicketList customerTikets={customerTikets} tickets={tickets} setTickets={setTickets} setResolved={setResolved} setCustomerTicketsData={setCustomerTicketsData} customerTicketsData={customerTicketsData} ></TicketList>
-      <TaskStatusSidebar tickets={tickets} handleRemoveTickets={handleRemoveTickets} customerTikets={customerTikets} resolved={resolved} setResolved={setResolved}></TaskStatusSidebar>
+      <TaskStatusSidebar tickets={tickets} handleRemoveTickets={handleRemoveTickets} customerTikets={customerTikets} resolved={resolved} setResolved={setResolved} ></TaskStatusSidebar>
     </div>
   );
 };
