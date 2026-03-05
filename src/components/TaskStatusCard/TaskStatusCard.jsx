@@ -6,7 +6,7 @@ const TaskStatusCard = ({ tickets,handleRemoveTickets,customerTikets }) => {
   return (
     <div className="grid grid-cols-1 gap-3 mb-6">
       {tickets.map((ticket) => (
-        <SelectedTicket tickets={tickets} ticket={ticket} handleRemoveTickets={handleRemoveTickets} customerTikets={customerTikets}></SelectedTicket>
+        <SelectedTicket key={ticket.id} tickets={tickets} ticket={ticket} handleRemoveTickets={handleRemoveTickets} customerTikets={customerTikets}></SelectedTicket>
       ))}
     </div>
   );

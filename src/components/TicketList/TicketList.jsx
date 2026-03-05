@@ -7,7 +7,10 @@ const TicketList = ({ tickets, setTickets, customerTicketsData }) => {
     // console.log(ticketData)
     const newTaskStatus = [...tickets, ticketData]
     setTickets(newTaskStatus)
-    toast("Customer Ticket Added Succsessfully")
+    toast.success(`Ticket #${ticketData.id} is now In Progres`, {
+      position: "bottom-right",
+      autoClose: 2000,
+    });
   }
 
   return (

@@ -6,7 +6,7 @@ import TicketList from "../TicketList/TicketList";
 
 const CustomerTicketsSection = ({ customerTicketPromis, tickets, setTickets,handleRemoveTickets,resolved, setResolved, setCustomerTicketsData, customerTicketsData }) => {
   const customerTikets = use(customerTicketPromis);
-  console.log(customerTikets);
+  // console.log(customerTikets);
   setCustomerTicketsData(customerTikets)
   return (
     <div className="max-w-[1200px] mx-auto pb-14 grid lg:grid-cols-3 gap-6">

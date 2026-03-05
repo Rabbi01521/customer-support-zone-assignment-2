@@ -1,7 +1,7 @@
 const SelectedTicket = ({ticket,handleRemoveTickets}) => {
 
     const handleRemoveTask = () =>{
-    console.log(ticket)
+    // console.log(ticket)
     handleRemoveTickets(ticket)
   }
 
