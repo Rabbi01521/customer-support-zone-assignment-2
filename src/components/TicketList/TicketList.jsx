@@ -1,9 +1,10 @@
 import { faCalendarAlt, faCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { toast } from "react-toastify";
-const TicketList = ({ tickets, setTickets, customerTicketsData }) => {
+const TicketList = ({ tickets, setTickets, customerTicketsData, setToggle, toggle }) => {
 
   const handleTickets = (ticketData) =>{
+    setToggle(true);
     console.log(customerTicketsData)
     const newTaskStatus = [...tickets, ticketData]
     setTickets(newTaskStatus)
@@ -18,7 +19,7 @@ const TicketList = ({ tickets, setTickets, customerTicketsData }) => {
       <h1 className="mb-4 text-2xl font-bold">Customer Tickets</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
         {customerTicketsData.map((ticket) => (
-          <div onClick={()=> handleTickets(ticket)} key={ticket.id} className="link no-underline card bg-base-100 card-sm shadow-sm">
+          <div onClick={()=> handleTickets(ticket)} key={ticket.id} className={`link no-underline card bg-base-100 card-sm shadow-sm cursor-pointer `}>
             <div className="card-body">
               <div className="flex justify-between items-center">
                 <h2 className="card-title text-xs md:text-sm">{ticket.title}</h2>

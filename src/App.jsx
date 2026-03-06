@@ -19,17 +19,18 @@ function App() {
   const [tickets, setTickets] = useState([]);
   const [resolved, setResolved] = useState([]);
   const [customerTicketsData, setCustomerTicketsData] = useState([]);
+  const [toggle, setToggle] = useState(false);
 
   const handleRemoveTickets = (taskTicket) => {
     // 1. Remove from "In Progress" (Right Side)
     const updatedInProgress = tickets.filter(
-      (ticket) => ticket.id !== taskTicket.id,
+      (ticket) => ticket.id !== taskTicket.id
     );
     setTickets(updatedInProgress);
 
     // 2. Remove from "Customer Tickets"
     const updatedCustomerData = customerTicketsData.filter(
-      (cus) => cus.id !== taskTicket.id,
+      (cus) => cus.id !== taskTicket.id
     );
     setCustomerTicketsData(updatedCustomerData);
 
@@ -55,10 +56,12 @@ function App() {
         }
       >
         <CustomerTicketsSection
+          setToggle={setToggle}
+          toggle={toggle}
           setTickets={setTickets}
-          tickets={tickets} 
+          tickets={tickets}
           customerTicketPromis={customerTicketPromise}
-          handleRemoveTickets={handleRemoveTickets} 
+          handleRemoveTickets={handleRemoveTickets}
           resolved={resolved}
           setResolved={setResolved}
           customerTicketsData={customerTicketsData}

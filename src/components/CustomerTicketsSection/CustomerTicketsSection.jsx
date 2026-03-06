@@ -4,7 +4,7 @@ import TaskStatusSidebar from "../TaskStatusSidebar/TaskStatusSidebar";
 import TicketList from "../TicketList/TicketList";
 
 
-const CustomerTicketsSection = ({ customerTicketPromis, tickets, setTickets,handleRemoveTickets,resolved, setResolved, setCustomerTicketsData, customerTicketsData }) => {
+const CustomerTicketsSection = ({ customerTicketPromis, tickets, setTickets,handleRemoveTickets,resolved, setResolved, setCustomerTicketsData, customerTicketsData , setToggle, toggle}) => {
   const customerTikets = use(customerTicketPromis);
   // console.log(customerTikets);
   useEffect(() => {
@@ -12,10 +12,10 @@ const CustomerTicketsSection = ({ customerTicketPromis, tickets, setTickets,hand
       setCustomerTicketsData(customerTikets);
     }
   }, [customerTikets, setCustomerTicketsData]); // Depend on customerTikets and setCustomerTicketsData to ensure it runs when either changes 
-  
+
   return (
     <div className="max-w-[1200px] mx-auto pb-14 grid lg:grid-cols-3 gap-6">
-      <TicketList customerTikets={customerTikets} tickets={tickets} setTickets={setTickets} setResolved={setResolved} setCustomerTicketsData={setCustomerTicketsData} customerTicketsData={customerTicketsData} ></TicketList>
+      <TicketList customerTikets={customerTikets} tickets={tickets} setTickets={setTickets} setResolved={setResolved} setCustomerTicketsData={setCustomerTicketsData} customerTicketsData={customerTicketsData} toggle={toggle} setToggle={setToggle} ></TicketList>
       <TaskStatusSidebar tickets={tickets} handleRemoveTickets={handleRemoveTickets} customerTikets={customerTikets} resolved={resolved} setResolved={setResolved} ></TaskStatusSidebar>
     </div>
   );
