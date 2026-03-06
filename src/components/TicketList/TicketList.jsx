@@ -4,10 +4,10 @@ import { toast } from "react-toastify";
 const TicketList = ({ tickets, setTickets, customerTicketsData }) => {
 
   const handleTickets = (ticketData) =>{
-    // console.log(ticketData)
+    console.log(customerTicketsData)
     const newTaskStatus = [...tickets, ticketData]
     setTickets(newTaskStatus)
-    toast.success(`Ticket #${ticketData.id} is now In Progres`, {
+    toast.info(`Ticket #${ticketData.id} is now In Progres`, {
       position: "bottom-right",
       autoClose: 2000,
     });
@@ -23,7 +23,7 @@ const TicketList = ({ tickets, setTickets, customerTicketsData }) => {
               <div className="flex justify-between items-center">
                 <h2 className="card-title text-xs md:text-sm">{ticket.title}</h2>
                 <span
-                  className={`${ticket.status === "Open" ? "bg-[#B9F8CF]" : "bg-[#F8F3B9]"} p-2 rounded-3xl text-xs md:text-sm`}
+                  className={`${ticket.status === "Open" ? "bg-[#B9F8CF]" : "bg-[#F8F3B9]"} p-2 rounded-3xl text-xs md:text-sm font-bold lg:text-[10px]`}
                 >
                   <FontAwesomeIcon
                     icon={faCircle}

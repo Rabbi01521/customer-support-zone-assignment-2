@@ -1,7 +1,7 @@
 import ResolvedCard from "../ResolvedCard/ResolvedCard";
 
 const ResolvedTaskCard = ({ resolved }) => {
-  console.log(resolved);
+  // console.log(resolved);
   return (
     <div>
       <h1 className="text-sx lg:text-2xl font-bold mb-3">Resolved Task</h1>

@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const Footer = () => {
   return (
     <div className="bg-black">
-      <div className="max-w-[1200px] mx-auto text-gray-200 border-b-2 border-gray-300 py-16 px-5">
+      <div className="max-w-[1200px] mx-auto text-gray-200 border-b-2 border-gray-300 py-8 px-5">
         <div className="lg:grid lg:grid-cols-2">
           <div className="">
             <h1 className="mb-3 text-xl lg:text-xl">CS — Ticket System</h1>
@@ -111,7 +111,7 @@ const Footer = () => {
       </div>
 
       <div className="text-center py-5">
-        <span className="text-gray-400 text-xs lg:text-xl md:text-xs">
+        <span className="text-gray-400 text-xs font-light lg:text-sm md:text-sm">
           © 2025 CS — Ticket System. All rights reserved.
         </span>
       </div>
